@@ -45,16 +45,6 @@ set foldlevel=99
 " Fold docstring
 let g:SimpylFold_docstring_preview=1
 
-" Comply to PEP8
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-"    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
-
 " Make Python code look pretty
 let python_highlight_all=1
 syntax on
@@ -64,6 +54,9 @@ let g:UltiSnipsUsePythonVersion = 2
 
 "ignore files in NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$']
+
+" Always have Nerdtree open on launch
+autocmd VimEnter * NERDTree
 
 " For other files other tabs
 au BufNewFile,BufRead *.js, *.html, *.css
