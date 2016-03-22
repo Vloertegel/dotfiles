@@ -57,6 +57,10 @@ let NERDTreeIgnore=['\.pyc$', '\~$']
 
 " Always have Nerdtree open on launch
 autocmd VimEnter * NERDTree
+let g:NERDTreeWinPos = "left"
+
+" Toogle NERDTRee with <leader> d
+map <leader>l :execute 'NERDTreeToggle ' . getcwd()<CR>
 
 " For other files other tabs
 au BufNewFile,BufRead *.js, *.html, *.css
